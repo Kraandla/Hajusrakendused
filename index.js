@@ -10,6 +10,10 @@ const thingamabobs = [
     { id: 2, name: "vana furby", price: 666 },
     { id: 3, name: "sapakas", price: 2000 },
 ]
+const clients = [
+    { id: 1, name: "Kevin", email: "Ei ütle"},
+]
+
 
 app.get('/thingamabobs', (req, res) => { res.send(thingamabobs) })
 
