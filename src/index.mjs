@@ -17,13 +17,13 @@ const displayCars = [{
 document.getElementById("document").innerHTML = GetHTMLCode(); 
 
 function GetHTMLCode(){
-    let htmlCode;
+    let htmlCode = "";
     
-    for (i=0; i<displayCars.length; i++) {
+    for (let i = 0; i < displayCars.length; i++) {
         htmlCode += 
         `
         <div id="json">
-        <h1> Car ${i + 1}} </h1>
+        <h1> Car ${i + 1} </h1>
         <p> Car brand: ${displayCars[i].Car.carBrand}</p>
         <p> Car color: ${displayCars[i].Car.color}</p>
         <p> Car window tint: ${displayCars[i].Car["Tinted windows"]}</p>
@@ -35,7 +35,6 @@ function GetHTMLCode(){
         <p> Car Rating: ${displayCars[i].Car.carRating} </p>
         </div>
         `
-
     }
 
     return htmlCode;
