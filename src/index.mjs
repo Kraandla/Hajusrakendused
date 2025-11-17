@@ -14,6 +14,19 @@ const displayCars = [{
     }
 }]
 
+document.getElementById("app").innerHTML = GetHTMLCode(); 
+
+function GetHTMLCode(){
+    let htmlCode;
+    
+    for (i=1; i<displayCars.length + 1; i++) {
+
+    }
+
+    return htmlCode;
+}
+
+
 function displayCars(){
     const p = document.createElement("p");
     p.innerHTML = `Brand of car: ${displayCars[0].Car.carBrand}`;
