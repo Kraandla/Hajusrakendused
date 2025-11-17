@@ -14,21 +14,29 @@ const displayCars = [{
     }
 }]
 
-document.getElementById("app").innerHTML = GetHTMLCode(); 
+document.getElementById("document").innerHTML = GetHTMLCode(); 
 
 function GetHTMLCode(){
     let htmlCode;
     
-    for (i=1; i<displayCars.length + 1; i++) {
+    for (i=0; i<displayCars.length; i++) {
+        htmlCode += 
+        `
+        <div id="json">
+        <h1> Car ${i + 1}} </h1>
+        <p> Car brand: ${displayCars[i].Car.carBrand}</p>
+        <p> Car color: ${displayCars[i].Car.color}</p>
+        <p> Car window tint: ${displayCars[i].Car["Tinted windows"]}</p>
+        <p> Car wheels: </p>
+        <li>Rim color: ${displayCars[i].Car.wheels.color}</li>
+        <li>Wheel thickness: ${displayCars[i].Car.wheels.thickness}</li>
+        <li>Wheel brand: ${displayCars[i].Car.wheels.brand}</li>
+        <p> Car type: ${displayCars[i].Car.carType}</p>
+        <p> Car Rating: ${displayCars[i].Car.carRating} </p>
+        </div>
+        `
 
     }
 
     return htmlCode;
-}
-
-
-function displayCars(){
-    const p = document.createElement("p");
-    p.innerHTML = `Brand of car: ${displayCars[0].Car.carBrand}`;
-    document.body.appendChild(p);
 }
