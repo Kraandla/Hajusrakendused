@@ -1,18 +1,34 @@
 
-const displayCars = [{
-    Car:{
-        carBrand:"BMW",
-        color:"violet",
-        "Tinted windows": true,
-        wheels:{
-            color: "worried green",
-            thickness:50,
-            brand:"Michelin"
-        },
-        carType: "Urban racer",
-        carRating: 5.0
+const displayCars = [
+    {
+        Car:{
+            carBrand:"BMW",
+            color:"violet",
+            "Tinted windows": true,
+            wheels:{
+                color: "worried green",
+                thickness:50,
+                brand:"Michelin"
+            },
+            carType: "Urban racer",
+            carRating: 5.0
+        }
+    },
+    {
+        Car:{
+            carBrand:"Volvo",
+            color:"gold",
+            "Tinted windows": false,
+            wheels:{
+                color: "excited yellow",
+                thickness:10,
+                brand:"Aeolus"
+            },
+            carType: "Compensator",
+            carRating: 1.1
+        }
     }
-}]
+]
 
 document.getElementById("document").innerHTML = GetHTMLCode(); 
 
