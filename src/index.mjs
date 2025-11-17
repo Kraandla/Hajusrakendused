@@ -1,5 +1,5 @@
 
-export const displayCars = [{
+const displayCars = [{
     Car:{
         carBrand:"BMW",
         color:"violet",
@@ -14,7 +14,7 @@ export const displayCars = [{
     }
 }]
 
-export function displayCars(){
+function displayCars(){
     const p = document.createElement("p");
     p.innerHTML = `Brand of car: ${displayCars[0].Car.carBrand}`;
     document.body.appendChild(p);
